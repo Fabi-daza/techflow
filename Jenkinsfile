@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clonar Repositorio') {
       steps {
-        git 'https://github.com/Fabi-daza/techflow.git',branch: 'main'
+        git 'https://github.com/Fabi-daza/techflow.git'
       }
     }
 
