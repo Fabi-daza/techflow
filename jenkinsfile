@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clonar Repositorio') {
       steps {
-        git 'https://github.com/Fabi-daza/techflow.git' // Cambia esto por tu URL real
+        git 'https://github.com/Fabi-daza/techflow.git',branch: 'main'
       }
     }
 
