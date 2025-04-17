@@ -9,19 +9,19 @@ pipeline {
 
     stage('Instalar Dependencias') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
       }
     }
 
     stage('Levantar json-server') {
       steps {
-        sh 'npm run start &'
+        bat 'npm run start &'
       }
     }
 
     stage('Ejecutar Pruebas') {
       steps {
-        sh 'npm run test'
+        bat 'npm run test'
       }
     }
   }
