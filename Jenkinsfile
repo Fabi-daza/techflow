@@ -13,12 +13,6 @@ pipeline {
       }
     }
 
-    stage('Levantar json-server') {
-      steps {
-        bat 'npm run start &'
-      }
-    }
-
     stage('Ejecutar Pruebas') {
       steps {
         bat 'npm run test'
