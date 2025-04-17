@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clonar Repositorio') {
       steps {
-        git 'https://github.com/Fabi-daza/techflow.git'
+        git branch: 'main', url: 'https://github.com/Fabi-daza/techflow.git'
       }
     }
 
@@ -16,14 +16,13 @@ pipeline {
 
     stage('Levantar json-server') {
       steps {
-        sh 'npx json-server --watch db.json --port 3000 &'
-        sh 'sleep 2'
+        sh 'npm run start'
       }
     }
 
     stage('Ejecutar Pruebas') {
       steps {
-        sh 'npm test'
+        sh 'npm run test'
       }
     }
   }
