@@ -1,9 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:18'
-    }
-  }
+  agent any
   stages {
     stage('Clonar Repositorio') {
       steps {
@@ -19,7 +15,7 @@ pipeline {
 
     stage('Levantar json-server') {
       steps {
-        sh 'npm run start'
+        sh 'npm run start &'
       }
     }
 
